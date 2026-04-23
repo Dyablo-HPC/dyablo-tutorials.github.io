@@ -30,3 +30,8 @@ This last option is to be manipulated with precaution. You might end up overwrit
 ## A note on the `main` file
 
 Because Dyablo has no way to know if your restart was meant to extend a run, start from scratch, or recover from a crash, the `main.xmf` file is written form scratch. Which means you will not have the info of the previous run in it. You can recondtruct manually or with a small python script the full list of files if necessary.
+
+
+## Final word
+
+Congratulations, you have finished the user tutorial. You are now ready to run Dyablo and play with configuration files. Feel free to experiment with the available runs in the `settings` folder located at the root of Dyablo ! 

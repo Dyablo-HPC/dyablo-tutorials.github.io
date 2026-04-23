@@ -216,3 +216,5 @@ When using Dyablo on a cluster or a supercomputer, you will have to use a job sc
 
 
 
+When you are ready, move to the third part of the tutorial on [the configuration file format](/user_tutorials/configuration_files).
+
