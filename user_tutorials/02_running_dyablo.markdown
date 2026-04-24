@@ -114,7 +114,7 @@ In this case, we have a single periodic domain, so we don't have any ghosts. The
 
 The next part indicates how many fields are being stored on the grid, in that case we go from 0 fields to 5 being allocated for hydrodynamics (density, three components for the momentum, and the total energy).
 
-The next part indicates which plugins are used. Plugins are the basic bricks of Dyablo, they contain features that can be run in parallel on the grid. You will see more information on these in the [developer tutorials](/developer_tutorials).
+The next part indicates which plugins are used. Plugins are the basic bricks of Dyablo, they contain features that can be run in parallel on the grid. You will see more information on these in the [developer tutorials](../developer_tutorials).
 
 In our example, we can see that: 
 
@@ -216,5 +216,5 @@ When using Dyablo on a cluster or a supercomputer, you will have to use a job sc
 
 
 
-When you are ready, move to the third part of the tutorial on [the configuration file format](/user_tutorials/configuration_files).
+When you are ready, move to the third part of the tutorial on [the configuration file format](configuration_files).
 

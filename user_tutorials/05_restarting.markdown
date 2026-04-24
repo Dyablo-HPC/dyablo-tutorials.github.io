@@ -19,7 +19,7 @@ With our blast run, we should have a restart file around iteration 86. Let's go 
 
 The run restarts and shoudl take a few tens of seconds to run. When finished you should have a new snapshot. Rendering it with Paraview or pyablo you give you the following result : 
 
-![The blast has moved even more and is now bounding on the box](/imgs/10_pyablo_2.png)
+![The blast has moved even more and is now bounding on the box](../imgs10_pyablo_2.png)
 
 ## A couple of interesting parameters
 

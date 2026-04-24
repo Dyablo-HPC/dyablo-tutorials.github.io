@@ -1,7 +1,7 @@
 ---
 layout: page
 title: User tutorials
-permalink: /user_tutorials
+permalink: /user_tutorials/
 parent: Home
 nav_order: 2
 ---

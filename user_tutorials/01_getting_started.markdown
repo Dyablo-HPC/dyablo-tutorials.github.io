@@ -95,4 +95,4 @@ For these two configurations, Kokkos should be able to automatically detect the 
 Compilation then works the same way as for cpu build.
 
 
-When you are ready, move to the second part of the tutorial on [how to run Dyablo](/user_tutorials/running_dyablo).
+When you are ready, move to the second part of the tutorial on [how to run Dyablo](running_dyablo).

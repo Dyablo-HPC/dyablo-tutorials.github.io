@@ -20,31 +20,31 @@ Alternatively, there is a `test_blast_3D_main.xmf` file that holds the whole tim
 
 We refer you to the [Self directed paraview tutorial](https://docs.paraview.org/en/latest/Tutorials/SelfDirectedTutorial/index.html) for more information. For now, load the `main` file, then click on the green `Apply` button on the pipeline window on the left. You should now have in the center view a cube: 
 
-![Initial Cube](/imgs/01_cube.png)
+![Initial Cube](../imgs/01_cube.png)
 
 This cube represents our domain, and as you can notice in the top toolbar, the current view displays the total energy ("e_tot"). Click and drag the left button of your mouse in the center view to rotate the cube to a more comfortable position.
 
-![Rotated Cube](/imgs/02_cube.png)
+![Rotated Cube](../imgs/02_cube.png)
 
-Now click the `clip` button in the toolbar ![clip button](/imgs/03_clip.png) to create a clip in the pipeline. You should see the clipping plane appear on the center view. On the left, you can see now that there is a clipping plane after your file in the pipeline browser and below in the properties inspector, you should see the properties of the clipping plane. Simple click `Apply` for now. Your cube should now be cut in half and you should see the initial conditions of the cube: 
+Now click the `clip` button in the toolbar ![clip button](../imgs/03_clip.png) to create a clip in the pipeline. You should see the clipping plane appear on the center view. On the left, you can see now that there is a clipping plane after your file in the pipeline browser and below in the properties inspector, you should see the properties of the clipping plane. Simple click `Apply` for now. Your cube should now be cut in half and you should see the initial conditions of the cube: 
 
-![Rotated cube with clipping](/imgs/04_clipped_cube.png).
+![Rotated cube with clipping](../imgs/04_clipped_cube.png).
 
 In the properties inspector, uncheck the `Show plane` button to remove the invasive display in the center. For that run Dyablo has only written two snapshots, one of the initial conditions which you are seeing now, and one of the final state at the end of the run. To move between these snapshots you can use the controls in the toolbar : 
 
-![Toolbar snapshot controls](/imgs/05_toolbar.png).
+![Toolbar snapshot controls](../imgs/05_toolbar.png).
 
 Click the right arrow and move to the last snapshot. You should see the final state of the simulation for the total energy variable:
 
-![Rotate cube with clipping, final state](/imgs/06_clipped_cube.png)
+![Rotate cube with clipping, final state](../imgs/06_clipped_cube.png)
 
 Finally, let's inspect the mesh. You can change the way the data is displayed by playing with the representation menu in the toolbar: 
 
-![Representation menu](/imgs/07_representation_menu.png)
+![Representation menu](../imgs/07_representation_menu.png)
 
 Select "Surface with Edges" to display the data with the AMR edges highlighted. You should see that the blocks are refined around the blast and coarse around the corners of the box: 
 
-![AMR cube of the data](/imgs/08_amr_cube.png)
+![AMR cube of the data](../imgs/08_amr_cube.png)
 
 There is a lot you can do with Paraview but learning to use and exploit the data is out of the scope of this tutorial. For more information, please check the [self directed tutorial](https://docs.paraview.org/en/latest/Tutorials/SelfDirectedTutorial/index.html). 
 
@@ -108,10 +108,10 @@ The code should be rather self explanatory:
 
 The result should be very close to this: 
 
-![The blast, sliced and rendered in Python](/imgs/09_pyablo.png)
+![The blast, sliced and rendered in Python](../imgs/09_pyablo.png)
 
 There are more features included in pyablo. You can read more about it in the [readme of pyablo](https://github.com/Dyablo-HPC/Pyablo)
 
 
 
-When you are ready, move to the fifth and final part of the user tutorial on [how to restart a Dyablo run](/user_tutorials/restarting).
+When you are ready, move to the fifth and final part of the user tutorial on [how to restart a Dyablo run](restarting).

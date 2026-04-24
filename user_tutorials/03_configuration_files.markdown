@@ -121,4 +121,4 @@ Last but not least, sometimes remembering all the parameters to a run can be dif
 Everytime you start a run, you should take a look at the `last.ini` file so you make sure you have not misspelled or forgotten a parameter.
 
 
-When you are ready, move to the fourth part of the tutorial on [how to analyze Dyablo outputs](/user_tutorials/analyzing).
+When you are ready, move to the fourth part of the tutorial on [how to analyze Dyablo outputs](analyzing).

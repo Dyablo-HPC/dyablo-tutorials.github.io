@@ -16,14 +16,14 @@ The following tutorials are separated in two parts. The first part is dedicated 
 
 ## Table of content
 
-### [1. User tutorials](user_tutorials/)
+### [1. User tutorials](user_tutorials)
  - [Getting and compiling the code](user_tutorials/getting_started)
  - [Running a sample simulation](user_tutorials/running_dyablo)
  - [Configuration files](user_tutorials/ini_file)
  - [Visualizing and analyzing the results of a simulation](user_tutorials/analyzing)
  - [Restarting a simulation](user_tutorials/restarting)
 
-### [2. Developer tutorials](developer_tutorials/)
+### [2. Developer tutorials](developer_tutorials)
  - [Organization of the sources](developer_tutorials/organization)
  - [Plugins in Dyablo](developer_tutorials/plugins)
  - [Creating an initial condition](developer_tutorials/initial_conditions)
