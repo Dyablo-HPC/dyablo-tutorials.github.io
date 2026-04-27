@@ -227,4 +227,33 @@ foreach_cell.foreach_cell("Isothermal cooling", Uout.getShape(),
   });
 ```
 
-You can now
+If you try to build on CPU you should be able to make dyablo without any compilation errors or warnings. If you try this on GPU you will get a lot of warnings. The reason for that is that all the variables and constants you use in the `KOKKOS_LAMBDA` should be local to the `update` function. Here, for instance, we use `ndim`, `gamma0` and `T0`, but these are attributes of the class. We should copy them locally to the function to avoid any problem. This is actually what we did with the line `ForeachCell& foreach_cell = this->foreach_cell`. Simply add before the call to `foreach_cell` the following lines:
+
+```c++
+auto ndim = this->ndim;
+auto gamma0 = this->gamma0;
+auto T0 = this->T0;
+```
+
+Now compiling on GPU should go smoothly !
+
+### Running an example
+
+Hopefully, now you should have a new source term available ! Let's try this. In the `build/dyablo/bin` folder open `test_blast_2D_block.ini` and add the following lines at the end of the file: 
+
+```ini
+[source_terms]
+update=SourceUpdate_isothermal_cooling
+
+[isothermal_cooling]
+t0=10.0
+```
+
+Now run the blast and open the result in paraview. Let's plot the temperature.
+Add a calculator to your file. In `Result array name` type `p` and in the field below type the following formula: `(e_tot - 0.5 * (rho_vx^2 + rho_vy^2)/rho) * 0.666666667`. Apply, then create another calculator after the first one. In `Result array name` type `T` and in the formula `p/rho`. 
+
+The initial condition is not isothermal, but the last snapshot should be. If you plot `T` in the last snapshot, you should end with something that is around 10.0 (more or less numerical noise): 
+
+![isothermal simulation for the blast](../imgs/13_isothermal_blast.png)
+
+Congratulations ! You made a plugin that iterates and modifies cells of the grid !
