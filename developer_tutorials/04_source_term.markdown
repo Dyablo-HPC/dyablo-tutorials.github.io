@@ -93,8 +93,8 @@ void some_function_in_my_plugin( UserData &user_data ) const {
     IE_TOT
   };
 
-  FieldAccessor Uin  = user_data.getAccessor({ {"rho", IRHO}, {"e_tot", IE_TOT} });
-  FieldAccessor Uout = user_data.getAccessor({ {"rho_next", IRHO}, {"e_tot_next", IE_TOT} });
+  UserData::FieldAccessor Uin  = user_data.getAccessor({ {"rho", IRHO}, {"e_tot", IE_TOT} });
+  UserData::FieldAccessor Uout = user_data.getAccessor({ {"rho_next", IRHO}, {"e_tot_next", IE_TOT} });
 
   ForeachCell& foreach_cell = this->foreach_cell;
 
@@ -124,8 +124,8 @@ void some_function_in_my_plugin( UserData &user_data) const {
     IE_TOT
   };
 
-  FieldAccessor Uin  = user_data.getAccessor({ {"rho", IRHO}, {"e_tot", IE_TOT} });
-  FieldAccessor Uout = user_data.getAccessor({ {"rho_next", IRHO}, {"e_tot_next", IE_TOT} });
+  UserData::FieldAccessor Uin  = user_data.getAccessor({ {"rho", IRHO}, {"e_tot", IE_TOT} });
+  UserData::FieldAccessor Uout = user_data.getAccessor({ {"rho_next", IRHO}, {"e_tot_next", IE_TOT} });
 
   ForeachCell& foreach_cell = this->foreach_cell;
 
@@ -202,11 +202,11 @@ void update( UserData &U, ScalarSimulationData &scalar_data)
     IE_TOT
   };
 
-  FieldAccessor Uout = U.getAccessor ({ {"rho_next",    IRHO},
-                                        {"rho_vx_next", IRHO_VX},
-                                        {"rho_vy_next", IRHO_VY},
-                                        {"rho_vz_next", IRHO_VZ},
-                                        {"e_tot_next",  IE_TOT} });
+  UserDataFieldAccessor Uout = U.getAccessor ({ {"rho_next",    IRHO},
+                                                {"rho_vx_next", IRHO_VX},
+                                                {"rho_vy_next", IRHO_VY},
+                                                {"rho_vz_next", IRHO_VZ},
+                                                {"e_tot_next",  IE_TOT} });
 ```
 
 Now that we have access to the fields of the user data, we can go through the `foreach_cell`, read the data, calculate the new energy, and store it to the grid:
@@ -243,7 +243,7 @@ Hopefully, now you should have a new source term available ! Let's try this. In 
 
 ```ini
 [source_terms]
-update=SourceUpdate_isothermal_cooling
+updates=SourceUpdate_isothermal_cooling
 
 [isothermal_cooling]
 t0=10.0
