@@ -249,3 +249,5 @@ Finally, we fill in the `result` state variable and return it:
 Congratulations ! You now have finished your first initialization plugin ! If you compile and run the [following `.ini` file](ini_files/isentropic_vortex.ini), you should get a similar result as below for the density and the refinement level:
 
 ![Isentropic_vortex](../imgs/12_isentropic_vortex.gif)
+
+You have written your first set of initial conditions. Congratulations ! Whenever you are ready, make your way to the next tutorial on implementing a [source term](source_term).
