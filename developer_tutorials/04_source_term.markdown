@@ -202,7 +202,7 @@ void update( UserData &U, ScalarSimulationData &scalar_data)
     IE_TOT
   };
 
-  UserDataFieldAccessor Uout = U.getAccessor ({ {"rho_next",    IRHO},
+  UserData::FieldAccessor Uout = U.getAccessor ({ {"rho_next",    IRHO},
                                                 {"rho_vx_next", IRHO_VX},
                                                 {"rho_vy_next", IRHO_VY},
                                                 {"rho_vz_next", IRHO_VZ},
